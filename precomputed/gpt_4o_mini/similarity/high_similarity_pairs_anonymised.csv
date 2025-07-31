@@ -1,0 +1,209 @@
+idx1,idx2,similarity,question1,question2
+23,80,0.9975783,Does the founder have a background in technology or engineering?,Does the founder have a background in engineering or technology?
+84,90,0.99483687,Has the founder co-founded a company with a small team?,Has the founder co-founded the company with a small team?
+18,27,0.9924089,Did the founder co-found their company with a small team?,Did the founder co-found the company with a small team?
+49,90,0.9921532,Has the founder co-founded their company with a small team?,Has the founder co-founded the company with a small team?
+52,105,0.9912781,Has the founder held a C-level role at a public tech company?,Has the founder previously held a C-level role at a public tech company?
+49,84,0.9909488,Has the founder co-founded their company with a small team?,Has the founder co-founded a company with a small team?
+42,49,0.99042356,Has the founder co-founded their current company with a small team?,Has the founder co-founded their company with a small team?
+13,22,0.9899546,Has the founder's previous startup been acquired?,Has the founder's previous startups been acquired?
+18,106,0.9893287,Did the founder co-found their company with a small team?,Did the founder co-found their company as part of a small team?
+84,114,0.98756284,Has the founder co-founded a company with a small team?,Has the founder previously co-founded a company with a small team?
+18,72,0.9868308,Did the founder co-found their company with a small team?,Did the founder co-found their current company with a small team?
+62,98,0.9864184,Has the founder held a senior leadership role in a technology company?,Has the founder previously held a senior leadership role in a technology company?
+5,28,0.98629916,Has the founder worked full-time at a moderate number of companies?,Has the founder previously worked full-time at a moderate number of companies?
+34,59,0.98592854,Does the founder hold an advanced degree in a technical field?,Does the founder hold advanced degrees in a technical field?
+36,69,0.9850832,Has the founder worked full-time at a large number of companies?,Has the founder worked full-time at a small number of companies?
+36,94,0.98498666,Has the founder worked full-time at a large number of companies?,Has the founder previously worked full-time at a large number of companies?
+42,114,0.98462766,Has the founder co-founded their current company with a small team?,Has the founder previously co-founded a company with a small team?
+25,110,0.9843884,Does the founder hold an advanced degree from a prestigious institution?,Does the founder hold an advanced degree from a prestigious university?
+27,106,0.9838545,Did the founder co-found the company with a small team?,Did the founder co-found their company as part of a small team?
+90,114,0.9836521,Has the founder co-founded the company with a small team?,Has the founder previously co-founded a company with a small team?
+49,114,0.98187894,Has the founder co-founded their company with a small team?,Has the founder previously co-founded a company with a small team?
+17,55,0.9816953,Has the founder held a leadership role in a public technology company?,Has the founder held a leadership role in a public tech company?
+42,84,0.9812227,Has the founder co-founded their current company with a small team?,Has the founder co-founded a company with a small team?
+42,90,0.9806787,Has the founder co-founded their current company with a small team?,Has the founder co-founded the company with a small team?
+38,46,0.9803337,Did the founder start their company alone?,Did the founder start their current company alone?
+102,112,0.9802263,Has the founder previously held a C-level role at a public company?,Has the founder served in a C-level role at a public company?
+72,106,0.979265,Did the founder co-found their current company with a small team?,Did the founder co-found their company as part of a small team?
+1,11,0.9769799,Has the founder previously co-founded a startup?,Has the founder co-founded a startup?
+27,72,0.9761405,Did the founder co-found the company with a small team?,Did the founder co-found their current company with a small team?
+113,126,0.97566265,Does the founder have a background in finance or investment management?,Does the founder have a background in finance or investment?
+29,58,0.97546524,Has the founder's previous startup experience included any acquisitions?,Did the founder's previous startups experience any acquisitions?
+15,79,0.97444713,Does the founder hold an advanced degree?,Does the founder possess an advanced degree?
+28,94,0.9737666,Has the founder previously worked full-time at a moderate number of companies?,Has the founder previously worked full-time at a large number of companies?
+89,111,0.9727159,Is the founder an Ivy League graduate?,Did the founder graduate from an Ivy League institution?
+5,36,0.97258955,Has the founder worked full-time at a moderate number of companies?,Has the founder worked full-time at a large number of companies?
+21,64,0.97210264,Did the founder start their company independently?,Did the founder launch their company independently?
+61,110,0.9716669,Has the founder earned an advanced degree from a prestigious university?,Does the founder hold an advanced degree from a prestigious university?
+24,131,0.9704981,Is the founder recognized for their public speaking or thought leadership?,Is the founder recognized for thought leadership and public speaking?
+34,88,0.97043085,Does the founder hold an advanced degree in a technical field?,Does the founder have advanced degrees in a technical field?
+66,107,0.9697361,Has the founder received any media recognition or press coverage?,Has the founder received significant media recognition or press coverage?
+59,88,0.96955085,Does the founder hold advanced degrees in a technical field?,Does the founder have advanced degrees in a technical field?
+69,94,0.96922684,Has the founder worked full-time at a small number of companies?,Has the founder previously worked full-time at a large number of companies?
+13,128,0.96845603,Has the founder's previous startup been acquired?,Has the founder's previous startup resulted in an acquisition?
+19,45,0.9680627,Has the founder's company received moderate press coverage?,Has the founder received moderate press coverage?
+70,97,0.9679874,Does the founder have experience in financial services?,Does the founder have experience in financial services or banking?
+97,109,0.9675428,Does the founder have experience in financial services or banking?,Does the founder have experience in investment banking or financial services?
+5,69,0.9666162,Has the founder worked full-time at a moderate number of companies?,Has the founder worked full-time at a small number of companies?
+3,78,0.9649044,Has the founder's previous startup experience included an acquisition?,Did the founder's previous startups experience acquisition?
+70,129,0.96439016,Does the founder have experience in financial services?,Does the founder have experience in the financial services sector?
+61,71,0.96409744,Has the founder earned an advanced degree from a prestigious university?,Has the founder earned an advanced degree from a reputable university?
+10,83,0.96390235,Does the founder have an Ivy League education?,Is the founder educated at an Ivy League institution?
+21,38,0.96199775,Did the founder start their company independently?,Did the founder start their company alone?
+22,128,0.96132725,Has the founder's previous startups been acquired?,Has the founder's previous startup resulted in an acquisition?
+4,87,0.9602742,Is the founder based in California?,Is the founder's company based in California?
+28,36,0.9596242,Has the founder previously worked full-time at a moderate number of companies?,Has the founder worked full-time at a large number of companies?
+61,124,0.9595321,Has the founder earned an advanced degree from a prestigious university?,Has the founder earned an advanced degree from a respected institution?
+40,126,0.9591555,Does the founder have a background in finance?,Does the founder have a background in finance or investment?
+2,62,0.9588554,Has the founder held a leadership role in a technology company?,Has the founder held a senior leadership role in a technology company?
+5,94,0.9583491,Has the founder worked full-time at a moderate number of companies?,Has the founder previously worked full-time at a large number of companies?
+39,45,0.9575889,Has the founder received moderate press or media coverage?,Has the founder received moderate press coverage?
+42,72,0.9570829,Has the founder co-founded their current company with a small team?,Did the founder co-found their current company with a small team?
+51,117,0.9570536,Does the founder have a strong personal brand or public presence?,Is the founder's personal brand or public presence considered strong?
+18,49,0.9564376,Did the founder co-found their company with a small team?,Has the founder co-founded their company with a small team?
+3,29,0.9549702,Has the founder's previous startup experience included an acquisition?,Has the founder's previous startup experience included any acquisitions?
+28,69,0.95218015,Has the founder previously worked full-time at a moderate number of companies?,Has the founder worked full-time at a small number of companies?
+18,84,0.95191306,Did the founder co-found their company with a small team?,Has the founder co-founded a company with a small team?
+49,106,0.95166886,Has the founder co-founded their company with a small team?,Did the founder co-found their company as part of a small team?
+1,127,0.95088565,Has the founder previously co-founded a startup?,Has the founder previously co-founded a company?
+102,105,0.95062566,Has the founder previously held a C-level role at a public company?,Has the founder previously held a C-level role at a public tech company?
+25,61,0.95056355,Does the founder hold an advanced degree from a prestigious institution?,Has the founder earned an advanced degree from a prestigious university?
+72,114,0.9499417,Did the founder co-found their current company with a small team?,Has the founder previously co-founded a company with a small team?
+42,56,0.949871,Has the founder co-founded their current company with a small team?,Has the founder's current venture been co-founded with a small team?
+18,90,0.9497568,Did the founder co-found their company with a small team?,Has the founder co-founded the company with a small team?
+56,114,0.9497176,Has the founder's current venture been co-founded with a small team?,Has the founder previously co-founded a company with a small team?
+40,113,0.94956076,Does the founder have a background in finance?,Does the founder have a background in finance or investment management?
+49,72,0.9489557,Has the founder co-founded their company with a small team?,Did the founder co-found their current company with a small team?
+27,84,0.948853,Did the founder co-found the company with a small team?,Has the founder co-founded a company with a small team?
+27,90,0.9487201,Did the founder co-found the company with a small team?,Has the founder co-founded the company with a small team?
+84,106,0.94854414,Has the founder co-founded a company with a small team?,Did the founder co-found their company as part of a small team?
+52,93,0.94810164,Has the founder held a C-level role at a public tech company?,Has the founder held a C-level role in a technology company?
+43,96,0.9478712,Has the founder previously held a leadership role in a startup?,Has the founder held leadership roles in multiple startups?
+90,106,0.9478461,Has the founder co-founded the company with a small team?,Did the founder co-found their company as part of a small team?
+63,85,0.947589,Has the founder's company achieved any acquisitions?,Has the founder's company achieved previous startup acquisitions?
+21,46,0.9474166,Did the founder start their company independently?,Did the founder start their current company alone?
+2,17,0.9456268,Has the founder held a leadership role in a technology company?,Has the founder held a leadership role in a public technology company?
+34,41,0.9454363,Does the founder hold an advanced degree in a technical field?,Does the founder hold an advanced degree in a relevant field?
+71,124,0.94484085,Has the founder earned an advanced degree from a reputable university?,Has the founder earned an advanced degree from a respected institution?
+72,84,0.94385135,Did the founder co-found their current company with a small team?,Has the founder co-founded a company with a small team?
+38,64,0.94363755,Did the founder start their company alone?,Did the founder launch their company independently?
+15,41,0.9434493,Does the founder hold an advanced degree?,Does the founder hold an advanced degree in a relevant field?
+18,114,0.94324917,Did the founder co-found their company with a small team?,Has the founder previously co-founded a company with a small team?
+18,42,0.9430735,Did the founder co-found their company with a small team?,Has the founder co-founded their current company with a small team?
+13,50,0.94295245,Has the founder's previous startup been acquired?,Has the founder's company been acquired in the past?
+25,124,0.94277966,Does the founder hold an advanced degree from a prestigious institution?,Has the founder earned an advanced degree from a respected institution?
+56,90,0.9423238,Has the founder's current venture been co-founded with a small team?,Has the founder co-founded the company with a small team?
+52,102,0.9420778,Has the founder held a C-level role at a public tech company?,Has the founder previously held a C-level role at a public company?
+15,25,0.9420172,Does the founder hold an advanced degree?,Does the founder hold an advanced degree from a prestigious institution?
+10,89,0.9419575,Does the founder have an Ivy League education?,Is the founder an Ivy League graduate?
+83,89,0.9418549,Is the founder educated at an Ivy League institution?,Is the founder an Ivy League graduate?
+49,56,0.94161075,Has the founder co-founded their company with a small team?,Has the founder's current venture been co-founded with a small team?
+27,49,0.94156796,Did the founder co-found the company with a small team?,Has the founder co-founded their company with a small team?
+70,109,0.9414483,Does the founder have experience in financial services?,Does the founder have experience in investment banking or financial services?
+83,111,0.941327,Is the founder educated at an Ivy League institution?,Did the founder graduate from an Ivy League institution?
+56,84,0.94118315,Has the founder's current venture been co-founded with a small team?,Has the founder co-founded a company with a small team?
+41,92,0.94035053,Does the founder hold an advanced degree in a relevant field?,Has the founder completed an advanced degree in a relevant field?
+42,106,0.9401261,Has the founder co-founded their current company with a small team?,Did the founder co-found their company as part of a small team?
+72,90,0.9398957,Did the founder co-found their current company with a small team?,Has the founder co-founded the company with a small team?
+106,114,0.93982214,Did the founder co-found their company as part of a small team?,Has the founder previously co-founded a company with a small team?
+3,128,0.9392764,Has the founder's previous startup experience included an acquisition?,Has the founder's previous startup resulted in an acquisition?
+10,111,0.93909776,Does the founder have an Ivy League education?,Did the founder graduate from an Ivy League institution?
+58,85,0.93854177,Did the founder's previous startups experience any acquisitions?,Has the founder's company achieved previous startup acquisitions?
+46,64,0.9376425,Did the founder start their current company alone?,Did the founder launch their company independently?
+37,118,0.9375587,Does the founder have experience in the healthcare sector?,Has the founder worked in the healthcare sector?
+27,114,0.9374761,Did the founder co-found the company with a small team?,Has the founder previously co-founded a company with a small team?
+93,105,0.93728596,Has the founder held a C-level role in a technology company?,Has the founder previously held a C-level role at a public tech company?
+86,107,0.93676883,Has the founder received significant press and media coverage?,Has the founder received significant media recognition or press coverage?
+30,44,0.936649,Does the founder have experience in the biotechnology sector?,Does the founder have experience in the healthcare or biotechnology sectors?
+15,110,0.9361927,Does the founder hold an advanced degree?,Does the founder hold an advanced degree from a prestigious university?
+86,101,0.93609035,Has the founder received significant press and media coverage?,Has the founder achieved notable press or media coverage?
+3,58,0.93587005,Has the founder's previous startup experience included an acquisition?,Did the founder's previous startups experience any acquisitions?
+58,78,0.93557966,Did the founder's previous startups experience any acquisitions?,Did the founder's previous startups experience acquisition?
+29,85,0.9353987,Has the founder's previous startup experience included any acquisitions?,Has the founder's company achieved previous startup acquisitions?
+39,86,0.9351755,Has the founder received moderate press or media coverage?,Has the founder received significant press and media coverage?
+2,98,0.93480915,Has the founder held a leadership role in a technology company?,Has the founder previously held a senior leadership role in a technology company?
+97,129,0.93445176,Does the founder have experience in financial services or banking?,Does the founder have experience in the financial services sector?
+52,112,0.9337269,Has the founder held a C-level role at a public tech company?,Has the founder served in a C-level role at a public company?
+110,124,0.9334471,Does the founder hold an advanced degree from a prestigious university?,Has the founder earned an advanced degree from a respected institution?
+41,59,0.9331621,Does the founder hold an advanced degree in a relevant field?,Does the founder hold advanced degrees in a technical field?
+2,55,0.930772,Has the founder held a leadership role in a technology company?,Has the founder held a leadership role in a public tech company?
+22,50,0.92965287,Has the founder's previous startups been acquired?,Has the founder's company been acquired in the past?
+45,57,0.92953163,Has the founder received moderate press coverage?,Has the founder received high levels of press coverage?
+71,110,0.92919487,Has the founder earned an advanced degree from a reputable university?,Does the founder hold an advanced degree from a prestigious university?
+123,128,0.9289142,Has the founder been involved in any previous startup acquisitions?,Has the founder's previous startup resulted in an acquisition?
+48,124,0.9283531,Did the founder complete an advanced degree from a well-regarded institution?,Has the founder earned an advanced degree from a respected institution?
+105,112,0.9282831,Has the founder previously held a C-level role at a public tech company?,Has the founder served in a C-level role at a public company?
+19,39,0.9278957,Has the founder's company received moderate press coverage?,Has the founder received moderate press or media coverage?
+0,41,0.9276177,Does the founder hold an advanced degree relevant to their industry?,Does the founder hold an advanced degree in a relevant field?
+58,123,0.9269944,Did the founder's previous startups experience any acquisitions?,Has the founder been involved in any previous startup acquisitions?
+11,68,0.92627555,Has the founder co-founded a startup?,Has the founder co-founded multiple startup ventures?
+27,42,0.92614377,Did the founder co-found the company with a small team?,Has the founder co-founded their current company with a small team?
+79,124,0.9260389,Does the founder possess an advanced degree?,Has the founder earned an advanced degree from a respected institution?
+85,123,0.92532676,Has the founder's company achieved previous startup acquisitions?,Has the founder been involved in any previous startup acquisitions?
+66,86,0.92531776,Has the founder received any media recognition or press coverage?,Has the founder received significant press and media coverage?
+15,34,0.925294,Does the founder hold an advanced degree?,Does the founder hold an advanced degree in a technical field?
+15,124,0.9251234,Does the founder hold an advanced degree?,Has the founder earned an advanced degree from a respected institution?
+29,78,0.9237535,Has the founder's previous startup experience included any acquisitions?,Did the founder's previous startups experience acquisition?
+7,107,0.92276025,Has the founder received significant media recognition?,Has the founder received significant media recognition or press coverage?
+48,61,0.9221097,Did the founder complete an advanced degree from a well-regarded institution?,Has the founder earned an advanced degree from a prestigious university?
+11,127,0.92187476,Has the founder co-founded a startup?,Has the founder previously co-founded a company?
+13,123,0.92172337,Has the founder's previous startup been acquired?,Has the founder been involved in any previous startup acquisitions?
+41,79,0.92163205,Does the founder hold an advanced degree in a relevant field?,Does the founder possess an advanced degree?
+22,123,0.92069465,Has the founder's previous startups been acquired?,Has the founder been involved in any previous startup acquisitions?
+50,128,0.92069143,Has the founder's company been acquired in the past?,Has the founder's previous startup resulted in an acquisition?
+0,15,0.920162,Does the founder hold an advanced degree relevant to their industry?,Does the founder hold an advanced degree?
+48,71,0.9195005,Did the founder complete an advanced degree from a well-regarded institution?,Has the founder earned an advanced degree from a reputable university?
+15,59,0.91928154,Does the founder hold an advanced degree?,Does the founder hold advanced degrees in a technical field?
+25,79,0.91921705,Does the founder hold an advanced degree from a prestigious institution?,Does the founder possess an advanced degree?
+1,68,0.91909164,Has the founder previously co-founded a startup?,Has the founder co-founded multiple startup ventures?
+29,123,0.9183642,Has the founder's previous startup experience included any acquisitions?,Has the founder been involved in any previous startup acquisitions?
+85,128,0.91830957,Has the founder's company achieved previous startup acquisitions?,Has the founder's previous startup resulted in an acquisition?
+0,34,0.9180668,Does the founder hold an advanced degree relevant to their industry?,Does the founder hold an advanced degree in a technical field?
+17,62,0.9173319,Has the founder held a leadership role in a public technology company?,Has the founder held a senior leadership role in a technology company?
+88,108,0.9153401,Does the founder have advanced degrees in a technical field?,Did the founder complete a degree in a technical field?
+63,123,0.9138086,Has the founder's company achieved any acquisitions?,Has the founder been involved in any previous startup acquisitions?
+100,104,0.91337174,Is the founder's background primarily in a technical field?,Is the founder's educational background in a technical field?
+60,125,0.9132676,Has the founder served on boards or as an advisor to large companies?,Has the founder held board or advisor roles at large companies?
+19,57,0.91321963,Has the founder's company received moderate press coverage?,Has the founder received high levels of press coverage?
+54,61,0.91287243,Has the founder graduated from a prestigious university?,Has the founder earned an advanced degree from a prestigious university?
+25,41,0.9126771,Does the founder hold an advanced degree from a prestigious institution?,Does the founder hold an advanced degree in a relevant field?
+79,88,0.91263974,Does the founder possess an advanced degree?,Does the founder have advanced degrees in a technical field?
+57,86,0.9124141,Has the founder received high levels of press coverage?,Has the founder received significant press and media coverage?
+79,110,0.91174096,Does the founder possess an advanced degree?,Does the founder hold an advanced degree from a prestigious university?
+109,129,0.9114225,Does the founder have experience in investment banking or financial services?,Does the founder have experience in the financial services sector?
+45,86,0.9113355,Has the founder received moderate press coverage?,Has the founder received significant press and media coverage?
+15,92,0.91128314,Does the founder hold an advanced degree?,Has the founder completed an advanced degree in a relevant field?
+0,59,0.91107696,Does the founder hold an advanced degree relevant to their industry?,Does the founder hold advanced degrees in a technical field?
+58,128,0.91076005,Did the founder's previous startups experience any acquisitions?,Has the founder's previous startup resulted in an acquisition?
+88,92,0.9102031,Does the founder have advanced degrees in a technical field?,Has the founder completed an advanced degree in a relevant field?
+92,124,0.90940875,Has the founder completed an advanced degree in a relevant field?,Has the founder earned an advanced degree from a respected institution?
+3,13,0.9085399,Has the founder's previous startup experience included an acquisition?,Has the founder's previous startup been acquired?
+79,92,0.908241,Does the founder possess an advanced degree?,Has the founder completed an advanced degree in a relevant field?
+15,61,0.9081343,Does the founder hold an advanced degree?,Has the founder earned an advanced degree from a prestigious university?
+12,78,0.9078878,Does the founder have previous startup experience?,Did the founder's previous startups experience acquisition?
+54,110,0.90777147,Has the founder graduated from a prestigious university?,Does the founder hold an advanced degree from a prestigious university?
+61,79,0.90770215,Has the founder earned an advanced degree from a prestigious university?,Does the founder possess an advanced degree?
+25,48,0.9076502,Does the founder hold an advanced degree from a prestigious institution?,Did the founder complete an advanced degree from a well-regarded institution?
+15,119,0.90755576,Does the founder hold an advanced degree?,Has the founder earned a Ph.D. or equivalent advanced degree?
+79,119,0.9072138,Does the founder possess an advanced degree?,Has the founder earned a Ph.D. or equivalent advanced degree?
+34,79,0.9069438,Does the founder hold an advanced degree in a technical field?,Does the founder possess an advanced degree?
+78,128,0.90630704,Did the founder's previous startups experience acquisition?,Has the founder's previous startup resulted in an acquisition?
+55,62,0.90577775,Has the founder held a leadership role in a public tech company?,Has the founder held a senior leadership role in a technology company?
+48,110,0.9057476,Did the founder complete an advanced degree from a well-regarded institution?,Does the founder hold an advanced degree from a prestigious university?
+9,60,0.90490985,Has the founder served on an advisory board for a large company?,Has the founder served on boards or as an advisor to large companies?
+34,92,0.90482503,Does the founder hold an advanced degree in a technical field?,Has the founder completed an advanced degree in a relevant field?
+3,85,0.9048032,Has the founder's previous startup experience included an acquisition?,Has the founder's company achieved previous startup acquisitions?
+1,120,0.90468836,Has the founder previously co-founded a startup?,Has the founder previously worked at a startup?
+14,33,0.9045355,Does the founder have a strong personal brand characterized by media recognition?,Is the founder known for having a strong personal brand and media presence?
+25,71,0.9042439,Does the founder hold an advanced degree from a prestigious institution?,Has the founder earned an advanced degree from a reputable university?
+0,79,0.90374917,Does the founder hold an advanced degree relevant to their industry?,Does the founder possess an advanced degree?
+15,88,0.902964,Does the founder hold an advanced degree?,Does the founder have advanced degrees in a technical field?
+101,107,0.9028655,Has the founder achieved notable press or media coverage?,Has the founder received significant media recognition or press coverage?
+22,85,0.90219486,Has the founder's previous startups been acquired?,Has the founder's company achieved previous startup acquisitions?
+41,88,0.9021758,Does the founder hold an advanced degree in a relevant field?,Does the founder have advanced degrees in a technical field?
+19,86,0.90179473,Has the founder's company received moderate press coverage?,Has the founder received significant press and media coverage?
+3,22,0.90124536,Has the founder's previous startup experience included an acquisition?,Has the founder's previous startups been acquired?
+22,58,0.90093505,Has the founder's previous startups been acquired?,Did the founder's previous startups experience any acquisitions?
+13,85,0.9005553,Has the founder's previous startup been acquired?,Has the founder's company achieved previous startup acquisitions?
+41,110,0.90025586,Does the founder hold an advanced degree in a relevant field?,Does the founder hold an advanced degree from a prestigious university?

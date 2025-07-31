@@ -1,0 +1,50 @@
+
+
+# Ignore environment variables
+.env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+vela_venv/
+env/
+.venv/
+.env/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Model files
+model/
+*.h5
+*.pkl
+*.pt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+
+
+
+papers/
+archive/
+results/
+notebooks/archive/
+notebooks/large/
+notebooks/
+job_submission/
+scripts/clinical_trials
+data_raw/
+src/data/
+data/raw/
+data/categorization_data.py
+data/founders_summary_data_anonymised_with_dates.csv
+data/preprocessed/
+scripts/private/

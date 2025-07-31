@@ -1,0 +1,15 @@
+numpy
+pandas
+seaborn
+matplotlib
+pydantic
+pydantic-settings
+ipykernel
+scipy
+scikit-learn
+openai
+google
+anthropic
+rapidfuzz
+openai
+google.generativeai
