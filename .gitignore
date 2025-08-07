@@ -32,20 +32,3 @@ Thumbs.db
 .vscode/
 
 
-
-papers/
-archive/
-results/
-notebooks/archive/
-notebooks/private/
-notebooks/large/
-notebooks/
-job_submission/
-scripts/clinical_trials
-data_raw/
-src/data/
-data/raw/
-data/categorization_data.py
-data/founders_summary_data_anonymised_with_dates.csv
-data/preprocessed/
-scripts/private/
