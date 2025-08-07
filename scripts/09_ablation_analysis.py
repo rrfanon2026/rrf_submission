@@ -4,76 +4,48 @@ import numpy as np
 import sys
 from pathlib import Path
 from sklearn.model_selection import StratifiedKFold
-from itertools import product
 
 # Add project root to Python path
 project_root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(project_root))
-from src.utils.scoring_utils import (f_beta_score,compute_weights,compute_weighted_cumulative_scores,select_best_hyperparams,evaluate_test_fold,select_best_centroid_params)
+from src.utils.scoring_utils import (compute_weights,select_best_hyperparams,evaluate_test_fold)
 from src.questions.question_filtering import filter_questions, construct_predictions_file_list
 
 # -----------------------------------------------------------------------------
 # Argument Parser
 # -----------------------------------------------------------------------------
 parser = argparse.ArgumentParser(description="Run nested CV with precision-based scoring.")
-parser.add_argument('--model', type=str, default='gpt-4o-mini', help='GPT model used')
-parser.add_argument('--weighting', type=str, default=0, choices=['0', '1', 'adaboost'], help="Weighting method: exponent value ('0', '1') or 'adaboost'")
-parser.add_argument('--n_splits', type=int, default=10, help="Number of splits for both outer and inner CV")
-parser.add_argument('--n_repeats', type=int, default=10, help="Number of outer CV repetitions")
 parser.add_argument('--results_dir_extension', type=str, default='precomputed')
 parser.add_argument('--mode', type=str, choices=['llm', 'llm_expert', 'expert_only'], required=True, help="Which question mode to load")
-parser.add_argument('--use_anonymised', type=str, choices=['simple', 'o3_mini_twostage', 'gpt_4o_mini_twostage'], default=None, help='Which anonymisation method to use')
-parser.add_argument('--precision-cutoff', type=float, default=0.02001)
-parser.add_argument('--similarity-metric', type=str, choices=['jaccard', 'hamming', 'cosine-cluster'], default='jaccard',help='Similarity metric used to remove redundant questions')
+parser.add_argument('--similarity-metric', type=str, choices=['jaccard', 'hamming', 'cosine-cluster'], required=True,help='Similarity metric used to remove redundant questions')
 parser.add_argument('--similarity-threshold', type=float, required=True,help='Threshold for filtering similar questions (used with the specified similarity metric)')
 parser.add_argument('--optimise-for', type=str, choices=['precision', 'f0.5', 'f1', 'f2'], default='f0.5', help="Metric to optimise: precision, f0.5, f1, or f2")
 parser.add_argument('--sort-by', type=str, choices=['precision', 'f0.5'], default='precision', help="Sort final questions by 'precision' or 'f0.5'")
 
-def build_suffix_str(args):
-    suffix = args.mode
-    suffix = f"nested_mode_{suffix}"
-
-    if args.use_anonymised == "simple":
-        suffix += "_anonymised"
-    elif args.use_anonymised:
-        suffix += f"_anonymised_{args.use_anonymised}"
-    return suffix
-
 # Parse arguments
 args = parser.parse_args()
-weighting = args.weighting
-n_splits     = args.n_splits
-n_repeats    = args.n_repeats
-suffix = "_anonymised"
-
-percentiles = list(range(90, 100))  # 90 to 99 inclusive
-
-if weighting in ['0', '1']:
-    exponents = [float(weighting)]
-elif weighting == 'adaboost':
-    exponents = []  # handled separately
-else:
-    raise ValueError(f"Unsupported weighting method: {weighting}")
+n_splits     = 10
+n_repeats    = 10
+weighting    = 0
+exponents    = [float(weighting)]
 
 # -----------------------------------------------------------------------------
 # Save Results
 # -----------------------------------------------------------------------------
 # build suffix for filenames
-suffix_str = build_suffix_str(args)
-similarity_str  = f"{args.similarity_threshold:.2f}".replace('.', '_')  # e.g., 0.85 -> "0_85"
-predictions_dir = project_root / "results" / args.results_dir_ext / args.model.replace('-','_')
+suffix = f"_anonymised"
+similarity_str  = f"{args.similarity_threshold:.2f}".replace('.', '_')
+predictions_dir = project_root / args.results_dir_extension / "gpt_4o_mini/test_predictions/"
 opt_str = f"optimise{args.optimise_for.replace('.', '_').upper()}"
 sort_str = f"sortby{args.sort_by.replace('.', '_')}"
 
 # Set file path names
-out_dir = predictions_dir / "ablation_results"
+out_dir =  project_root / args.results_dir_extension / "gpt_4o_mini/ablation_results"
 out_dir.mkdir(parents=True, exist_ok=True)
 out_path = out_dir / (
-    f"nested_cv_no_leakage_nsplits{n_splits}_"
-    f"exponent{weighting}_"
-    f"repeats{n_repeats}_"
+    f"nested_cv_{args.mode}_{suffix}"
     f"similarity_{args.similarity_metric}_{similarity_str}_"
-    f"{suffix_str}_{opt_str}_{sort_str}.csv"
+    f"{opt_str}_{sort_str}.csv"
 )
 
 # Check if output file already exists
@@ -82,22 +54,11 @@ if out_path.exists():
     print(f"🛑 Skipping analysis — results already exist at:\n{out_path}")
     sys.exit(0)
 
-
 # -----------------------------------------------------------------------------
 # Load and Prepare Data
 # -----------------------------------------------------------------------------
 predictions_files = construct_predictions_file_list(args, suffix)
 df = filter_questions(predictions_dir, predictions_files, suffix, args, sort_by=args.sort_by)
-
-# print(f"✅ Final filtered dataframe contains {df.shape[0]} rows.")
-# print(df.head(5))
-
-# question_rows = df[~df['Question'].isin(['Founder Index', 'Dataset', 'Success'])]
-# print(f"📊 Number of question rows: {question_rows.shape[0]}")
-# print(f"📋 Unique questions (sample):\n{question_rows['Question'].unique()[:5]}")
-
-# df.to_csv(csv_path, index=False)
-# df = pd.read_csv(csv_path)
 special_rows = df[df['Question'].isin(['Founder Index','Dataset','Success'])]
 filtered_df = df[~df['Question'].isin(['Founder Index','Dataset','Success'])].copy()
 
@@ -111,14 +72,13 @@ Q, F = X.shape
 success_series = special_rows[special_rows['Question']=='Success'][founder_cols].iloc[0]
 success_values = pd.to_numeric(success_series, errors='coerce').fillna(0).astype(int).values
 
+# -----------------------------------------------------------------------------
+# Nested CV With Repeats
+# -----------------------------------------------------------------------------
 results = []
 founder_indices = np.arange(F)
 founder_rows = []
 score_thresholds = list(range(1, 71))
-
-# -----------------------------------------------------------------------------
-# Nested CV With Repeats
-# -----------------------------------------------------------------------------
 
 for repeat in range(1, n_repeats + 1):
     print(f"\n🔁 Repeat {repeat}/{n_repeats}")

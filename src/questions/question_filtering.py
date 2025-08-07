@@ -35,7 +35,7 @@ def filter_and_save_questions(predictions_dir: Path, predictions_files: list[str
     filtered_df['Prec'] = pd.to_numeric(filtered_df['Prec'], errors='coerce')
     filtered_df = filtered_df.sort_values(by='Prec', ascending=False, na_position='last')
 
-    sample_file = predictions_dir / f"predictions_test_set_1_question_model_gpt_4o_mini{suffix}.csv"
+    sample_file = predictions_dir / f"predictions_test_set_1{suffix}.csv"
     final_df = add_success_row(filtered_df, sample_file)
 
     out_file = predictions_dir / f"filtered_combined_questions_with_success_{args.mode.replace('+', '_')}{suffix}_TEST.csv"
@@ -45,10 +45,12 @@ def filter_and_save_questions(predictions_dir: Path, predictions_files: list[str
 
 
 def filter_questions(predictions_dir: Path, predictions_files: list[str], suffix: str, args, sort_by: str = "precision") -> pd.DataFrame:
+    precision_cutoff = 0.02001
+    
     combined_df = load_and_merge_predictions(predictions_dir, predictions_files, SPECIAL_QUESTIONS)
     
     # Step 1: Filter out low-precision questions early
-    filtered_df = filter_low_precision_questions(combined_df, SPECIAL_QUESTIONS, args.precision_cutoff)
+    filtered_df = filter_low_precision_questions(combined_df, SPECIAL_QUESTIONS, precision_cutoff)
 
     # Step 2: Cap LLM questions *before* removing duplicates/similarity
     if args.mode == "llm_expert":
@@ -78,7 +80,7 @@ def filter_questions(predictions_dir: Path, predictions_files: list[str], suffix
     # filtered_df['Prec'] = pd.to_numeric(filtered_df['Prec'], errors='coerce')
     # filtered_df = filtered_df.sort_values(by='Prec', ascending=False, na_position='last')
 
-    sample_file = predictions_dir / f"predictions_test_set_1_question_model_gpt_4o_mini{suffix}.csv"
+    sample_file = predictions_dir / f"predictions_test_set_1{suffix}.csv"
     final_df = add_success_row(filtered_df, sample_file)
     return final_df
 
@@ -100,9 +102,6 @@ def cap_llm_questions_to_match_expert_count(df: pd.DataFrame, original_total: in
     sort_column = 'Prec' if sort_by == "precision" else 'F0.5'
     combined_df[sort_column] = pd.to_numeric(combined_df[sort_column], errors='coerce')
     return combined_df.sort_values(by=sort_column, ascending=False, na_position='last').reset_index(drop=True)
-
-
-
 
 def construct_predictions_file_list(args, suffix):
     base = f"predictions_test_set_{{}}{suffix}.csv"

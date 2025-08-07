@@ -53,48 +53,6 @@ def compute_weights(weighting, exponent, prec_array, ratio_array):
         label = exponent
     return W, label
 
-# def select_best_hyperparams(X_train, y_train, train_ids, weighting, exponents,
-#                             score_thresholds, Q, success_values, n_splits, outer_seed):
-#     prec_array = np.zeros(Q, dtype=float)
-#     for qi in range(Q):
-#         preds_q = X_train[qi, :]
-#         tp = ((preds_q == 1) & (y_train == 1)).sum()
-#         fp = ((preds_q == 1) & (y_train == 0)).sum()
-#         prec_array[qi] = tp / (tp + fp) if tp + fp > 0 else 0.0
-
-#     mean_prec_train = prec_array.mean()
-#     ratio_array = (prec_array / mean_prec_train) if mean_prec_train > 0 else np.ones(Q)
-
-#     best_combo = None
-#     best_mean_f05 = -1.0
-#     inner_skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=outer_seed)
-#     weighting_options = ['adaboost'] if weighting == 'adaboost' else exponents
-
-#     for w in weighting_options:
-#         W, label = compute_weights(weighting, w, prec_array, ratio_array)
-#         scores_train = compute_weighted_cumulative_scores(X_train, W)
-#         for n_q in range(1, Q + 1):
-#             for t in score_thresholds:
-#                 f05_vals = []
-#                 for _, (_, iv) in enumerate(inner_skf.split(train_ids, y_train)):
-#                     val_ids = train_ids[iv]
-#                     pos = np.where(np.isin(train_ids, val_ids))[0]
-#                     preds = (scores_train[n_q - 1, pos] >= t).astype(int)
-#                     yv = success_values[val_ids]
-#                     tp_i = ((preds == 1) & (yv == 1)).sum()
-#                     fp_i = ((preds == 1) & (yv == 0)).sum()
-#                     fn_i = ((preds == 0) & (yv == 1)).sum()
-#                     p = tp_i / (tp_i + fp_i) if tp_i + fp_i > 0 else 0.0
-#                     r = tp_i / (tp_i + fn_i) if tp_i + fn_i > 0 else 0.0
-#                     f05_vals.append(f_beta_score(p, r))
-
-#                 f05_score = np.mean(f05_vals)
-#                 if f05_score > best_mean_f05:
-#                     best_mean_f05 = f05_score
-#                     best_combo = (label, n_q, t)
-
-#     return best_combo, prec_array, ratio_array, best_mean_f05
-
 def select_best_hyperparams(
     X_train, y_train, train_ids, weighting, exponents,
     score_thresholds, Q, success_values, n_splits, outer_seed,

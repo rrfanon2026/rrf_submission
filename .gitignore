@@ -37,6 +37,7 @@ papers/
 archive/
 results/
 notebooks/archive/
+notebooks/private/
 notebooks/large/
 notebooks/
 job_submission/
