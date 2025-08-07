@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str
     OPENAI_ORG_ID: Optional[str] = None
     GEMINI_API_KEY: str
-    SERP_VELA_KEY: Optional[str] = None
-    SERP_VELA_URL: Optional[str] = None
+    SERP_API_KEY: Optional[str] = None
+    SERP_API_URL: Optional[str] = None
     ANTHROPIC_API_KEY: str
 
     class Config:  # Use Config class for settings

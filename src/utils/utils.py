@@ -32,9 +32,9 @@ def google_search(q: str, num_results: int) -> List[Dict[str, Any]]:
     assert num_results <= 15, "Number of results must be less than or equal to 15"
 
     params = {"query": q, "num_results": num_results}
-    headers = {"accept": "application/json", "serp-vela-key": settings.SERP_VELA_KEY}
 
-    response = requests.get(settings.SERP_VELA_URL + "search/", params=params, headers=headers)
+    headers = {"accept": "application/json", "api-key": settings.SERP_API_KEY}
+    response = requests.get(settings.SERP_API_URL + "search/", params=params, headers=headers)
     response.raise_for_status()
     data = response.json().get("results", [])
     return data
