@@ -1,5 +1,3 @@
-
-
 # Ignore environment variables
 .env
 
@@ -30,5 +28,4 @@ Thumbs.db
 
 # IDE specific files
 .vscode/
-
 
