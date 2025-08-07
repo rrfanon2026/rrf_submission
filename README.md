@@ -5,11 +5,13 @@ This repository implements **Random Rule Forests (RRF)**, an interpretable ensem
 ## Repository Structure
 ```
 .
+├── data/                 # anonymised founder-level input data
+├── notebooks/            # Jupyter notebooks for generating paper figures
 ├── precomputed/          # all artefacts needed for reproduction
 │   └── gpt_4o_mini/      # model-specific subfolder (see README for details)
 ├── scripts/              # numbered pipeline scripts
 ├── src/                  # core RRF library (question logic, utils, scoring)
-├──  requirements.txt     # Python dependencies
+├── requirements.txt      # Python dependencies
 └── README.md             # project overview
 
 ### OpenAI API Key
@@ -58,3 +60,15 @@ python 06_test_questions.py --provider openai --model gpt-4o-mini --mode vanilla
 for i in {0..6}; do
   python 06_test_questions.py --provider openai --model gpt-4o-mini --mode questions --question_set "$i"
 done
+```
+
+## 📊 Paper Figures
+
+The `notebooks/paper_figures.ipynb` notebook recreates the core figures from the RRF paper submission using outputs stored in `precomputed/`. This includes:
+
+- Ensemble performance vs. vanilla GPT prompting
+- Comparison of LLM-only, LLM + expert collaboration, and expert-only models
+- Ablation studies on filtering and ranking strategies
+- Comparison of optimisation cost functions (e.g., precision vs. F0.5 vs. F1)
+
+No external API access is required to run this notebook.
