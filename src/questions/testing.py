@@ -113,7 +113,7 @@ def update_results_file(results_file: Path, question: str, responses: list, test
         # Identify founder columns as those not in ['Index', 'Question'] plus our metric columns.
         metric_columns = ['Pass Rate', 'Prec', 'TP', 'FP', 'TN', 'FN', 'Rec', 'F1', 'F0.5',
                           'Prec_Train', 'Prec_Validation', 'Prec_Test', 'Prec_Mean']
-        founder_cols = [col for col in results_df.columns if col not in ['Index', 'Question'] + metric_columns]
+        founder_cols = sorted([col for col in results_df.columns if col not in ['Index', 'Question'] + metric_columns])
         # Create a dictionary mapping each founder column to its sequential index (starting at 1)
         founder_index_dict = {col: i+1 for i, col in enumerate(founder_cols)}
         founder_index_row = {'Index': '', 'Question': 'Founder Index'}
@@ -223,8 +223,8 @@ def update_founder_index(results_file: Path):
     metric_columns = ['Index', 'Question', 'Pass Rate', 'Prec', 'TP', 'FP', 'TN', 'FN', 
                       'Rec', 'F1', 'F0.5', 'Prec_Train', 'Prec_Validation', 'Prec_Test', 'Prec_Mean']
     
-    # Identify founder columns by excluding metric columns
-    founder_columns = [col for col in results_df.columns if col not in metric_columns]
+    # Identify founder columns by excluding metric columns — sort for deterministic order
+    founder_columns = sorted([col for col in results_df.columns if col not in metric_columns])
 
     # If there are no founder columns, warn and return
     if not founder_columns:

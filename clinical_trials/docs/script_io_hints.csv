@@ -1,0 +1,23 @@
+script,phase_hint,inputs_hint,outputs_hint
+01_build_clin_trial_summaries.py,unassigned,df = pd.read_csv(path),"$ python scripts/summarise_clinical_trials_to_csv.py \ | pd.DataFrame(all_rows).to_csv(output_path, index=False)"
+01_build_clin_trial_summaries_parallel.py,unassigned,df = pd.read_csv(path),"$ python scripts/summarise_clinical_trials_to_csv.py \ | #                 pd.DataFrame(all_rows).to_csv(output_path, index=False) | #     pd.DataFrame(all_rows).to_csv(output_path, index=False)"
+02_clin_trial_question_generation.py,phase_I,df = pd.read_csv(data_path),
+03_validate_questions.py,unassigned,trials_df = pd.read_csv(trial_data_path) | questions_df = pd.read_csv(question_path),
+03_validate_questions_final.py,unassigned,trials_df = pd.read_csv(trial_data_path) | questions_df = pd.read_csv(args.questions_file) | existing_df = pd.read_csv(prediction_file),
+03_validate_questions_parallel.py,unassigned,trials_df = pd.read_csv(trial_data_path) | questions_df = pd.read_csv(question_path),
+04_explore_predictions.py,figures,df = pd.read_csv(full_path) | combined_df = pd.read_csv(input_csv) | df_cache = pd.read_csv(f1_csv),"out_df.to_csv(output_csv, index=False) | ]).to_csv(f1_csv, index=False)"
+05_stats_test_questions.py,figures,candidates = sorted(pred_dir.glob(pattern)) | df0 = pd.read_csv(candidates[0]) | results_df = pd.read_csv(perm_out),"sig.to_csv(sig_out, index=False) | baseline.to_csv(base_out, index=False)"
+06_analyse_final_predictions_V3.py,figures,"files = sorted(predictions_dir.glob(pattern)) | sample_df = pd.read_csv(files[0]) | base_df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)","plt.savefig(output_dir / f""inversion_impact_{phase}_{model}.png"") | plt.savefig(output_dir / f""f1_distribution_{phase}_{model}.png"") | final_df.to_csv(out_path, index=False)"
+07_hyperparameter_validation.py,figures,"df = pd.read_csv(csv_path, dtype=str)","df_res.to_csv(out_file, index=False)"
+07_hyperparameter_validation_BOOTSTRAP.py,figures,"df = pd.read_csv(csv_path, dtype=str)","pd.DataFrame(rows).to_csv(boot_out, index=False) | df_res.to_csv(out_file, index=False)"
+08_stats_comparison.py,unassigned,,
+09_logistic_regression.py,unassigned,"df = pd.read_csv(csv_path, dtype=str)",
+09_logistic_regression_explore.py,unassigned,"df = pd.read_csv(csv_path, dtype=str)","df_repeats.to_csv(repeats_out, index=False) | pd.DataFrame(out_rows).to_csv(boot_out, index=False)"
+09_question_stability_analysis.py,stability_analysis,"df = pd.read_csv(csv_path, dtype=str)","fig.savefig(save_path, dpi=250, bbox_inches=""tight"") | df.to_csv(csv_out, index=False)"
+10_optimization_sensitivity_analysis.py,unassigned,"df = pd.read_csv(csv_path, dtype=str)",
+11_metric_sensitivity_supplementary.py,figures,"df = pd.read_csv(csv_path, dtype=str)","plt.savefig(output_dir / ""predicted_positive_rate_vs_beta.png"") | plt.savefig(output_dir / ""selected_nq_vs_beta.png"") | plt.savefig(output_dir / ""selected_thr_vs_beta.png"")"
+12_f1_stability_analysis.py,stability_analysis,"df = pd.read_csv(csv_path, dtype=str)","plt.savefig(output_dir / f""stability_correlation_phase_{phase}.png"") | plt.savefig(output_dir / f""stability_trajectories_phase_{phase}.png"")"
+13_stability_analysis_full_sets.py,stability_analysis,"files = sorted(glob.glob(str(file_pattern))) | main_df = pd.read_csv(files[0], dtype=str) | chunk = pd.read_csv(f, dtype=str)","plt.savefig(output_dir / f""stability_correlation_phase_{phase}.png"") | plt.savefig(output_dir / f""stability_trajectories_phase_{phase}_FULL.png"") | plt.savefig(output_dir / ""stability_trajectories_COMBINED_PHASES.png"")"
+09_stability_exploration.py,stability_analysis,"df = pd.read_csv(csv_path, dtype=str)",
+compare_and_combine.py,phase_III,"candidates_new = sorted(list(results_dir.glob(""*NEWVERSION.csv""))) | df_v3 = pd.read_csv(path_v3) | df_new = pd.read_csv(path_new)","combined_df.to_csv(out_path, index=False)"
+save_filtered_questions.py,unassigned,"files = sorted(glob.glob(str(results_dir / pattern))) | files = sorted(glob.glob(str(results_dir / pattern_alt))) | with open(f, 'r') as tmp:","top_20.to_csv(output_path, index=False)"

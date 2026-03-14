@@ -1,0 +1,48 @@
+{
+  "analysis_role": "secondary_ablation",
+  "phase": "I",
+  "input_dir": "clinical_trials/data",
+  "val_file": "phase_I_filtered_combined_questions_with_success_gpt_4o_mini_val_split.csv",
+  "test_file": "phase_I_filtered_combined_questions_with_success_gpt_4o_mini_test.csv",
+  "output_dir": "clinical_trials/results/phase_I/ablation_results",
+  "highlight_beta": 0.5,
+  "beta_sweep_values": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0],
+  "experiments": [
+    {
+      "label": "primary_reference",
+      "description": "Locked primary reference (optimize F0.5).",
+      "n_splits": 5,
+      "min_q": 12,
+      "optimise_for": "f0.5",
+      "n_repeats": 10,
+      "seed_start": 0
+    },
+    {
+      "label": "optimise_precision",
+      "description": "Ablation: optimize precision instead of F0.5.",
+      "n_splits": 5,
+      "min_q": 12,
+      "optimise_for": "precision",
+      "n_repeats": 10,
+      "seed_start": 0
+    },
+    {
+      "label": "optimise_f1",
+      "description": "Ablation: optimize F1 instead of F0.5.",
+      "n_splits": 5,
+      "min_q": 12,
+      "optimise_for": "f1",
+      "n_repeats": 10,
+      "seed_start": 0
+    },
+    {
+      "label": "optimise_f2",
+      "description": "Ablation: optimize F2 instead of F0.5.",
+      "n_splits": 5,
+      "min_q": 12,
+      "optimise_for": "f2",
+      "n_repeats": 10,
+      "seed_start": 0
+    }
+  ]
+}

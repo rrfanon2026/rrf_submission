@@ -1,0 +1,15 @@
+{
+  "locked": true,
+  "analysis_role": "primary",
+  "phase": "I",
+  "model_tag": "gpt_4o_mini",
+  "input_dir": "clinical_trials/data",
+  "val_file": "phase_I_filtered_combined_questions_with_success_gpt_4o_mini_val_split.csv",
+  "test_file": "phase_I_filtered_combined_questions_with_success_gpt_4o_mini_test.csv",
+  "output_dir": "clinical_trials/results/phase_I/primary_results",
+  "optimise_for": "f0.5",
+  "n_splits": 5,
+  "n_repeats": 10,
+  "seed_start": 0,
+  "min_q": 12
+}

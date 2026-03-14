@@ -31,3 +31,13 @@ Thumbs.db
 
 
 *.ipynb_checkpoints/
+
+# Smoke-test output directory (created dynamically by reproduce_paper.py)
+repro/
+
+# Clinical trials legacy provenance archive (~102MB, not needed for reproduction)
+clinical_trials/legacy_snapshot/
+
+# Internal archive/backup directories (not needed for reproduction)
+precomputed/gpt_4o_mini/archive/
+scripts/archive/

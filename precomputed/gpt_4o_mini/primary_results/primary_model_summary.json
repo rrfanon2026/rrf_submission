@@ -1,0 +1,22 @@
+{
+  "n_rows": 100,
+  "precision_mean": 0.12548,
+  "precision_std": 0.09008273189606644,
+  "recall_mean": 0.10000000000000002,
+  "recall_std": 0.06745503552872698,
+  "f05_mean": 0.11728,
+  "f05_std": 0.07988452271683777,
+  "tp_total": 158,
+  "fp_total": 1124,
+  "tn_total": 79036,
+  "fn_total": 1422,
+  "pooled_precision": 0.12324492979719189,
+  "pooled_recall": 0.1,
+  "n_repeats_observed": 10,
+  "precision_repeat_mean": 0.12547999999999998,
+  "precision_repeat_sd": 0.01540626135338775,
+  "recall_repeat_mean": 0.1,
+  "recall_repeat_sd": 0.0063933993740071865,
+  "f05_repeat_mean": 0.11728000000000001,
+  "f05_repeat_sd": 0.011569384887134954
+}

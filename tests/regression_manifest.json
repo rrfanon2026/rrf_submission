@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-03-14T18:50:39.407744+00:00",
+  "file_count": 15,
+  "notes": "Golden checksums for offline regression of precomputed pipeline artifacts.",
+  "files": [
+    {
+      "path": "precomputed/01_question_training_data_anonymised.csv",
+      "size_bytes": 267836,
+      "sha256": "0f3379f8f90bdfd24e854aef71edba5d63a41b7ff9716e008e3afd8008e37ee2",
+      "rows": 497,
+      "n_columns": 3
+    },
+    {
+      "path": "precomputed/02_question_validation_data_anonymised.csv",
+      "size_bytes": 245748,
+      "sha256": "ed31f0bb1f8d0dc776d4b5d28776626f512a16176bb3e137981e43d167adb997",
+      "rows": 491,
+      "n_columns": 3
+    },
+    {
+      "path": "precomputed/03_full_cross_validation_test_data_anonymised.csv",
+      "size_bytes": 4045744,
+      "sha256": "424a78f4c60c71935ae68028633e7a16b39146624996d94f550524deb97b5780",
+      "rows": 8204,
+      "n_columns": 3
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/initial_questions/generated_questions_all_anonymised.csv",
+      "size_bytes": 14373,
+      "sha256": "dc7b537363f33b4e6d563509993ca94b4e5abf3590bde9bc146de147290ca401",
+      "rows": 240,
+      "n_columns": 1
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/initial_questions/generated_questions_semantic_dedup_anonymised.csv",
+      "size_bytes": 3898,
+      "sha256": "85ef146520b3fecf1e621ee539d35e7c1eda8faf7e87616f7ee107981ff733af",
+      "rows": 62,
+      "n_columns": 1
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/initial_questions/generated_questions_unique_anonymised.csv",
+      "size_bytes": 8265,
+      "sha256": "e291bb5ec411f2a2ab50c795f1f94ec3699ce3eb4cf4b7e78b146cc1e2d969cb",
+      "rows": 132,
+      "n_columns": 1
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/similarity/questions_dedup_0_80_anonymised.csv",
+      "size_bytes": 3898,
+      "sha256": "85ef146520b3fecf1e621ee539d35e7c1eda8faf7e87616f7ee107981ff733af",
+      "rows": 62,
+      "n_columns": 1
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/test_predictions/predictions_test_all_anonymised.csv",
+      "size_bytes": 1076030,
+      "sha256": "64a0cf2830e6966a7be34773ca2fd5b610fbc1542d2a4b0959fa27c21e75c210",
+      "rows": 54,
+      "n_columns": 8188
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/test_predictions/predictions_test_set_7_anonymised_EXPERT.csv",
+      "size_bytes": 316636,
+      "sha256": "8e1651140a55288c91d2aa9d93b29c329fff1fc7415cb2202a7e192e28befcc1",
+      "rows": 8,
+      "n_columns": 8186
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/test_predictions/predictions_test_set_8_anonymised_EXPERT.csv",
+      "size_bytes": 312386,
+      "sha256": "b94d5a3972dec71bfa10ac9064dc04e64025fc6ef9f7ce4955e934f309055b51",
+      "rows": 8,
+      "n_columns": 8187
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/test_questions/selected_questions_all_anonymised.csv",
+      "size_bytes": 3060,
+      "sha256": "235d4e4e95ce48a9266da663f2b40c704a0510447f306939b68b16dcbaaa2b27",
+      "rows": 48,
+      "n_columns": 1
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/test_questions/selected_questions_set_7_anonymised_EXPERT.csv",
+      "size_bytes": 428,
+      "sha256": "1bbb8d36630cf026fcbd532d6d4703ad3f31a635f9751b70142d50fc7f3f49d9",
+      "rows": 4,
+      "n_columns": 1
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/test_questions/selected_questions_set_8_anonymised_EXPERT.csv",
+      "size_bytes": 311,
+      "sha256": "9bf6a761deb96734db79bc2e2120066719ad10f3814d89ff1795a379db4c7864",
+      "rows": 4,
+      "n_columns": 2
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/validation_predictions/predictions_val_set_all_question_anonymised.csv",
+      "size_bytes": 82237,
+      "sha256": "03ea33b8c6a77e2d95649834d305232c48da7c36bc9ca1132a6e55abda40f2a5",
+      "rows": 66,
+      "n_columns": 494
+    },
+    {
+      "path": "precomputed/gpt_4o_mini/validation_stats/high_precision_questions_anonymised_baseline_j1_0.csv",
+      "size_bytes": 56090,
+      "sha256": "f2e504fffc1395585487975e08435c21e16f1081c9bf61ccc836cc4fdf0fa8c2",
+      "rows": 48,
+      "n_columns": 487
+    }
+  ]
+}

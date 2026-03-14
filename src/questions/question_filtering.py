@@ -35,7 +35,7 @@ def filter_and_save_questions(predictions_dir: Path, predictions_files: list[str
     filtered_df['Prec'] = pd.to_numeric(filtered_df['Prec'], errors='coerce')
     filtered_df = filtered_df.sort_values(by='Prec', ascending=False, na_position='last')
 
-    sample_file = predictions_dir / f"predictions_test_set_1{suffix}.csv"
+    sample_file = _resolve_sample_predictions_file(predictions_dir, predictions_files, suffix)
     final_df = add_success_row(filtered_df, sample_file)
 
     out_file = predictions_dir / f"filtered_combined_questions_with_success_{args.mode.replace('+', '_')}{suffix}_TEST.csv"
@@ -80,7 +80,7 @@ def filter_questions(predictions_dir: Path, predictions_files: list[str], suffix
     # filtered_df['Prec'] = pd.to_numeric(filtered_df['Prec'], errors='coerce')
     # filtered_df = filtered_df.sort_values(by='Prec', ascending=False, na_position='last')
 
-    sample_file = predictions_dir / f"predictions_test_set_1{suffix}.csv"
+    sample_file = _resolve_sample_predictions_file(predictions_dir, predictions_files, suffix)
     final_df = add_success_row(filtered_df, sample_file)
     return final_df
 
@@ -103,20 +103,44 @@ def cap_llm_questions_to_match_expert_count(df: pd.DataFrame, original_total: in
     combined_df[sort_column] = pd.to_numeric(combined_df[sort_column], errors='coerce')
     return combined_df.sort_values(by=sort_column, ascending=False, na_position='last').reset_index(drop=True)
 
-def construct_predictions_file_list(args, suffix):
-    base = f"predictions_test_set_{{}}{suffix}.csv"
+def _resolve_sample_predictions_file(
+    predictions_dir: Path, predictions_files: list[str], suffix: str
+) -> Path:
+    candidates = [predictions_dir / f"predictions_test_all{suffix}.csv"]
+    candidates.extend(predictions_dir / file_name for file_name in predictions_files)
+
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        "No prediction files found for adding Success row. "
+        f"Checked: {[str(c) for c in candidates]}"
+    )
+
+
+def construct_predictions_file_list(args, suffix, predictions_dir: Path | None = None):
+    canonical_all = f"predictions_test_all{suffix}.csv"
     args.mode = args.mode.lstrip('_')
-    
+
     if args.mode == "llm":
-        files = [base.format(i) for i in range(7)]
-        # files = [base.format(i) for i in range(7) if i != 3]
+        files = [canonical_all]
     elif args.mode == "llm_expert":
-        files = [base.format(i) for i in range(7)] + [f"predictions_test_set_{i}{suffix}_EXPERT.csv" for i in [7, 8]]
+        llm_files = [canonical_all]
+        expert_files = [f"predictions_test_set_{i}{suffix}_EXPERT.csv" for i in [7, 8]]
+        files = llm_files + expert_files
     elif args.mode == "expert_only":
         files = [f"predictions_test_set_{i}{suffix}_EXPERT.csv" for i in [7, 8]]
     else:
         raise ValueError(f"Unknown mode: {args.mode}")
-    
+
+    if predictions_dir is not None:
+        missing = [f for f in files if not (predictions_dir / f).exists()]
+        if missing:
+            raise FileNotFoundError(
+                f"Missing prediction files for mode={args.mode}: {missing}. "
+                "Generate canonical predictions_test_all (and expert files if required) first."
+            )
+
     logger.info(f"📄 Found {len(files)} prediction files for mode: {args.mode}")
     print(f"📄 Found {len(files)} prediction files for mode: {args.mode}")
     return files

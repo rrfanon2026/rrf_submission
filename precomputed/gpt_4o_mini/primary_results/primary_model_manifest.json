@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-03-01T20:17:28.547325+00:00",
+  "analysis_role": "primary",
+  "locked": true,
+  "config_path": "configs/primary_model_locked.json",
+  "config": {
+    "name": "primary_locked_llm_hamming015_f05",
+    "analysis_role": "primary",
+    "locked": true,
+    "notes": "Fixed primary model for headline reporting. Do not tune this config after viewing results.",
+    "results_dir_extension": "precomputed",
+    "model": "gpt_4o_mini",
+    "mode": "llm",
+    "similarity_metric": "hamming",
+    "similarity_threshold": 0.15,
+    "optimise_for": "f0.5",
+    "sort_by": "f0.5",
+    "n_splits": 10,
+    "n_repeats": 10
+  },
+  "engine_script": "scripts/03_nested_cv_engine.py",
+  "engine_output_csv": "precomputed/gpt_4o_mini/ablation_results/nested_cv_llm__anonymisedsimilarity_hamming_0_15_optimiseF0_5_sortbyf0_5.csv",
+  "primary_output_csv": "precomputed/gpt_4o_mini/primary_results/primary_model_fold_metrics.csv",
+  "primary_summary_json": "precomputed/gpt_4o_mini/primary_results/primary_model_summary.json",
+  "guardrail_note": "Primary model config is fixed before analysis. Do not replace headline metrics using secondary ablation results."
+}

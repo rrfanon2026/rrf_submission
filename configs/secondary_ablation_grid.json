@@ -1,0 +1,95 @@
+{
+  "name": "secondary_ablations_v1",
+  "analysis_role": "secondary_ablation",
+  "notes": "Secondary what-if analyses only. Primary headline model stays fixed in configs/primary_model_locked.json.",
+  "experiments": [
+    {
+      "label": "primary_reference",
+      "description": "Locked primary configuration for side-by-side comparison.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.15,
+      "optimise_for": "f0.5",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_sort_precision",
+      "description": "Sort candidates by precision instead of F0.5.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.15,
+      "optimise_for": "f0.5",
+      "sort_by": "precision",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_optimise_precision",
+      "description": "Optimise inner CV for precision (instead of F0.5), keeping sort fixed at F0.5.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.15,
+      "optimise_for": "precision",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_optimise_f1",
+      "description": "Optimise inner CV for F1 (instead of F0.5), keeping sort fixed at F0.5.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.15,
+      "optimise_for": "f1",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_optimise_f2",
+      "description": "Optimise inner CV for F2 (instead of F0.5), keeping sort fixed at F0.5.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.15,
+      "optimise_for": "f2",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_similarity_hamming_010",
+      "description": "Stricter hamming similarity filter at 0.10.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.10,
+      "optimise_for": "f0.5",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_similarity_hamming_020",
+      "description": "Looser hamming similarity filter at 0.20.",
+      "mode": "llm",
+      "similarity_metric": "hamming",
+      "similarity_threshold": 0.20,
+      "optimise_for": "f0.5",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    },
+    {
+      "label": "ablate_similarity_jaccard_015",
+      "description": "Swap similarity metric from hamming to jaccard at 0.15.",
+      "mode": "llm",
+      "similarity_metric": "jaccard",
+      "similarity_threshold": 0.15,
+      "optimise_for": "f0.5",
+      "sort_by": "f0.5",
+      "n_splits": 10,
+      "n_repeats": 1
+    }
+  ]
+}

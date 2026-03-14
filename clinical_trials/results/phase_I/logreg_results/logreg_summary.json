@@ -1,0 +1,23 @@
+{
+  "n_repeats_observed": 2,
+  "roc_auc_repeat_mean": 0.591511424454508,
+  "roc_auc_repeat_sd": 0.006029620916149131,
+  "pr_auc_repeat_mean": 0.6320860871855991,
+  "pr_auc_repeat_sd": 0.0011448679563725887,
+  "precision_repeat_mean": 0.5820530266450112,
+  "precision_repeat_sd": 0.005757794122738467,
+  "recall_repeat_mean": 0.7161383285302594,
+  "recall_repeat_sd": 0.014264401925953423,
+  "f05_repeat_mean": 0.6046592521689573,
+  "f05_repeat_sd": 0.00293697615552919,
+  "f1_repeat_mean": 0.6421005183682669,
+  "f1_repeat_sd": 0.002231123492587742,
+  "f2_repeat_mean": 0.6845420236638107,
+  "f2_repeat_sd": 0.008835228549097518,
+  "tp_total": 497,
+  "fp_total": 357,
+  "tn_total": 203,
+  "fn_total": 197,
+  "pooled_precision": 0.5819672131147541,
+  "pooled_recall": 0.7161383285302594
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-03-14T12:44:42.871632+00:00",
+  "analysis_role": "primary",
+  "locked": true,
+  "config_path": "clinical_trials/configs/primary_model_locked.json",
+  "config": {
+    "locked": true,
+    "analysis_role": "primary",
+    "phase": "I",
+    "model_tag": "gpt_4o_mini",
+    "input_dir": "clinical_trials/data",
+    "val_file": "phase_I_filtered_combined_questions_with_success_gpt_4o_mini_val_split.csv",
+    "test_file": "phase_I_filtered_combined_questions_with_success_gpt_4o_mini_test.csv",
+    "output_dir": "clinical_trials/results/phase_I/primary_results",
+    "optimise_for": "f0.5",
+    "n_splits": 5,
+    "n_repeats": 2,
+    "seed_start": 0,
+    "min_q": 12
+  },
+  "inputs": {
+    "val_csv": "clinical_trials/data/phase_I_filtered_combined_questions_with_success_gpt_4o_mini_val_split.csv",
+    "test_csv": "clinical_trials/data/phase_I_filtered_combined_questions_with_success_gpt_4o_mini_test.csv"
+  },
+  "outputs": {
+    "repeat_metrics_csv": "clinical_trials/results/phase_I/primary_results/primary_model_repeat_metrics.csv",
+    "summary_json": "clinical_trials/results/phase_I/primary_results/primary_model_summary.json",
+    "manifest_json": "clinical_trials/results/phase_I/primary_results/primary_model_manifest.json"
+  },
+  "guardrail_note": "Primary model configuration is fixed up front. Do not overwrite headline reporting with secondary ablations."
+}

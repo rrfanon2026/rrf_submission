@@ -1,0 +1,15 @@
+{
+  "name": "primary_locked_llm_hamming015_f05",
+  "analysis_role": "primary",
+  "locked": true,
+  "notes": "Fixed primary model for headline reporting. Do not tune this config after viewing results.",
+  "results_dir_extension": "precomputed",
+  "model": "gpt_4o_mini",
+  "mode": "llm",
+  "similarity_metric": "hamming",
+  "similarity_threshold": 0.15,
+  "optimise_for": "f0.5",
+  "sort_by": "f0.5",
+  "n_splits": 10,
+  "n_repeats": 1
+}
